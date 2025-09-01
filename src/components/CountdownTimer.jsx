@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
+import FailGame from './FailGame';
 
 function CountdownTimer({ duration }) {
   const [time, setTime] = useState(duration);
@@ -12,15 +13,24 @@ function CountdownTimer({ duration }) {
     return () => clearTimeout(timerId);
   }, [time]);
 
-  const getFormattedTime = (milliseconds) => {
-    const totalSeconds = Math.floor(milliseconds / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
+  
+    const totalSeconds = Math.floor(time / 1000);  //milliseconds
+    const minutes = Math.floor(totalSeconds / 60);  //seconds
     const seconds = totalSeconds % 60;
 
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
-  };
+     const isFinished = minutes <= 0 && seconds <= 0;
 
-  return <div className="timer">{getFormattedTime(time)}</div>;
+  return (
+    <div className="timer">
+      {!isFinished ? (
+        <span>
+          {minutes}:{seconds.toString().padStart(2, '0')}
+        </span>
+      ) : (
+        <FailGame />
+      )}
+    </div>
+  );
 }
 
 export default CountdownTimer;

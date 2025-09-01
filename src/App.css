@@ -259,3 +259,25 @@
   background-color: grey;
   border: #ee0909 4px solid;
 }
+
+.stampImage {
+  width: 50vw;  /* 20% of viewport width */
+  position: absolute;
+  top: 800%;
+  right: 10%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.stampButton {
+  position: relative;
+  bottom: 4px;
+  width: 100%;
+  height: 70px;
+  background-color: #b29b54;
+  border: 4px solid #ee0909; /* outline */
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
