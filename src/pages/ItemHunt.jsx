@@ -1,3 +1,7 @@
+import PlayerManager from "../components/PlayerCard";
+
 export default function ItemHunt() {
-  return <h1 style={{ color: "red" }}>ItemHunt</h1>;
+  return <div> <h1 style={{ color: "red" }}>Item Hunt</h1>;
+  <PlayerManager />
+  </div>
 }

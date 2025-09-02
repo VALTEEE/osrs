@@ -1,3 +1,7 @@
+import PlayerManager from "../components/PlayerCard";
+
 export default function ResourceRush() {
-  return <h1 style={{ color: "red" }}>ResourceRush</h1>;
+  return <div> <h1 style={{ color: "red" }}>Resource Rush</h1>;
+  <PlayerManager />
+  </div>
 }

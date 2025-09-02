@@ -3,6 +3,7 @@ import ChallengeCard from '../components/ChallengeCard';
 import { LengthCard } from '../components/ChallengeCard';
 import Css from '../App.css';
 import StartGameBtn from '../components/StartGameBtn';
+import PlayerManager from '../components/PlayerCard';
 
  
 
@@ -30,12 +31,17 @@ export default function Challenges() {
   return (
     <div className="Challenges-title" style={{ textAlign: 'center', marginTop: '50px' }}>
       <h1>Challenges Page</h1>
-      <p>Here are all the OSRS challenges.</p>
+
+      <div className="Players-section" style={{ margin: '20px 0' }}>
+        <p>Here are all the OSRS challenges.</p>
+        <PlayerManager />
+      </div>
 
       <div className="SubBars">
         <div className="GamesBar"><p>Games</p></div>
         <div className="RandomizerBar"><p>Random Menu</p></div>
       </div>
+
 
       <div className="Cards-row">
         <ChallengeCard onStart={handleStart} />

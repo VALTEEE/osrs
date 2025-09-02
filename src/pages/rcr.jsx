@@ -1,3 +1,7 @@
+import PlayerManager from "../components/PlayerCard";
+
 export default function RCR() {
-  return <h1 style={{ color: "red" }}>RCR</h1>;
+  return <div> <h1 style={{ color: "red" }}>Red Click Race</h1>;
+  <PlayerManager />
+  </div>
 }

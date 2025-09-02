@@ -39,6 +39,127 @@
 
 /*Challenge Page Styles */
 
+.playerCard {
+  position: absolute;
+  right :0;
+  top: 5vh;
+  width: 40%;
+  height: 400px;
+  background-color: #b29b54;
+  border: 4px solid #ee0909; /* outline */
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 600 Arial, Helvetica, sans-serif;
+  color: #02fa5d;
+}
+
+.playerCard__title {
+  
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* List wrapper */
+.playerList {
+  border: 2px solid #000000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Rows */
+.playerList__row {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #010000;
+}
+.playerList__row:first-child {
+  border-top: none;
+  color: #000;
+}
+
+/* Header row */
+.playerList__row--header {
+  background: #b6b2b2;
+  font-weight: 600;
+}
+
+/* Columns */
+.playerList__col {
+  padding: 10px 12px;
+}
+.playerList__col--name {
+  flex: 0 0 70%;
+}
+.playerList__col--score {
+  flex: 0 0 20%;
+  text-align: center;
+}
+/* Vertical divider between name and score */
+.playerList__col--divider {
+  border-left: 5px solid #090000;
+}
+
+/* Input area */
+.addPlayerInput {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.addPlayerInput__field {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.addPlayerButton {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #22c55e; /* green */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.addPlayerButton:hover {
+  filter: brightness(0.95);
+}
+
+.plusButton {
+  margin-top: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 999px;
+  background: #3b82f6; /* blue */
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.plusButton:hover {
+  filter: brightness(0.95);
+}
+
+.removeButton {
+  position: absolute;
+  right: 50px;
+  width: 35px;
+  height: 27px;
+}
+
+/* Max reached msg */
+.limitMsg {
+  color: #dc2626;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
 .Challenges-title p {
   text-align: center;
   margin-top: 50px;
