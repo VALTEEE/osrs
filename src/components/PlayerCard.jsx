@@ -5,23 +5,46 @@ function PlayerManager() {
   const [players, setPlayers] = useState([]);
   const [showInput, setShowInput] = useState(false);
   const [newName, setNewName] = useState("");
-
+  const [defaultscore, setDefaultScore] = useState(0);
   const inputRef = useRef(null);
-
   const removePlayer = (index) => {
   const updatedPlayers = players.filter((_, i) => i !== index);
   setPlayers(updatedPlayers);
 };
 
+const increaseScore = (index) => {
+  const updatedPlayers = [...players];
+  updatedPlayers[index].score += 1;
+  setPlayers(updatedPlayers);
+};
 
+const reduceScore = (index) => {
+  const updatedPlayers = [...players];
+  updatedPlayers[index].score -= 1;
+  setPlayers(updatedPlayers);
+};
+
+  
 
   const addPlayer = () => {
     if (newName.trim() !== "" && players.length < 6) {
-      setPlayers([...players, { name: newName, score: 0 }]); // default score = 0
+      setPlayers([...players, { name: newName, score: defaultscore }]); // default score = 0
       setNewName("");
       setShowInput(false);
     }
   };
+
+  useEffect(() => {
+  const storedPlayers = localStorage.getItem("players");
+  if (storedPlayers) {
+    setPlayers(JSON.parse(storedPlayers));
+  }
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("players", JSON.stringify(players));
+}, [players]);
+
 
   useEffect(() => {
     if (showInput && inputRef.current) {
@@ -50,6 +73,10 @@ function PlayerManager() {
             <div className="playerList__col playerList__col--name">{player.name}</div>
             <div className="playerList__col playerList__col--score playerList__col--divider">
               {player.score}
+              {/* score button */}
+              <button className="addScore" onClick={() => increaseScore(index)}>➕</button>
+              <button className="reduceScore" onClick={() => reduceScore(index)}>➖</button>
+
               {/* Remove button */}
       <button
         onClick={() => removePlayer(index)}

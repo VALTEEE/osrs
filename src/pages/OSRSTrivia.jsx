@@ -1,7 +1,7 @@
 import PlayerManager from "../components/PlayerCard";
 
 export default function OSRSTrivia() {
-  return <div> <h1 style={{ color: "red" }}>OSRS Trivia</h1>;
+  return <div className="gameNameDiv"> <h1 className="gameTitle" style={{ color: "red" }}>OSRS Trivia</h1>;
   <PlayerManager />
   </div>
 }

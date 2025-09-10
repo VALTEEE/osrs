@@ -39,7 +39,7 @@ export default function Challenges() {
 
       <div className="SubBars">
         <div className="GamesBar"><p>Games</p></div>
-        <div className="RandomizerBar"><p>Random Menu</p></div>
+        {/* <div className="RandomizerBar"><p>Random Menu</p></div> */}
       </div>
 
 

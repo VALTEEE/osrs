@@ -6,7 +6,7 @@ import React from "react";
 
 
 export default function BossSpeedrun() {
-  return <div> <h1 style={{ color: "red" }}>BossSpeedrun</h1>;
+  return <div className="gameNameDiv"> <h1 className="gameTitle" style={{ color: "red" }}>Boss Speedrun</h1>;
   <PlayerManager />
   </div>
 }

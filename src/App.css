@@ -1,3 +1,13 @@
+/* General Styles */
+.gameTitle {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ee0909; /* Bright red color */
+  text-shadow: 2px 2px #000; /* Optional: adds a shadow for better visibility */
+}
+
 /*Home Page Styles */
 .HomePageBoxes {
   display: flex;
@@ -43,7 +53,7 @@
   position: absolute;
   right :0;
   top: 5vh;
-  width: 40%;
+  width: 35%;
   height: 400px;
   background-color: #b29b54;
   border: 4px solid #ee0909; /* outline */
@@ -148,9 +158,25 @@
 
 .removeButton {
   position: absolute;
-  right: 50px;
+  right: 320px;
   width: 35px;
   height: 27px;
+}
+
+.addScore {
+  color: green;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.reduceScore {
+  color: red;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Max reached msg */
@@ -369,8 +395,7 @@
 
 .timer {
   position: absolute;
-  top: 100px;
-  right: 100px;
+  top: 65px;
   width: 200px;
   height:65px;
   text-align: center;
@@ -402,3 +427,18 @@
   cursor: pointer;
 }
 
+/*wikiRace*/
+
+.wikiRaceGameDiv {
+  position: relative;
+  top: 25vh;
+  left: 37.5%;
+  width: 25%;
+  height: 50%;
+  border: 7px solid #ffffff; /* outline */
+  background-color: #b29b54;
+}
+
+.wikiRaceGameDiv h1 {
+  margin-left: 8px;
+}
